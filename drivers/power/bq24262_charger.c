@@ -381,11 +381,6 @@ static int bq24262_get_dpm_state(struct bq24262_chip * chip);
 static void bq24262_set_clear_reg(struct bq24262_chip *chip);
 //static int set_register_to_default(struct bq24262_chip *chip, bool enable);
 
-#ifdef CONFIG_MACH_APQ8064_ALTEV
-extern void write_high_temp_power_off(void);
-extern int read_high_temp_power_off(char *filename);
-#endif
-
 static unsigned int cable_type;
 static bool is_factory_cable(void)
 {
@@ -1198,14 +1193,6 @@ static int bq24262_batt_power_get_property(struct power_supply *psy,
 			value = pseudo_batt_info_new.temp *10;
 		else
 			 bq24262_get_prop_batt_temp(chip, &value);
-			if(lge_get_boot_mode() != LGE_BOOT_MODE_CHARGERLOGO) {
-
-				if(value > 600)
-				{
-					//pr_info("===== Turned off cuase of High temperature =====\n");
-					write_high_temp_power_off();
-				}
-			}
 			val->intval = value;
 		break;
 	case POWER_SUPPLY_PROP_BATT_TEMP_ADC:

@@ -78,8 +78,3 @@ unsiged char bq24262_is_charger_state(void);
 extern int32_t bq24262_is_ready(void);
 extern int32_t external_bq24262_enable_charging(bool enable);
 #endif
-
-#ifdef CONFIG_MACH_APQ8064_ALTEV
-extern void write_high_temp_power_off(void);
-extern int read_high_temp_power_off(char *filename);
-#endif
