@@ -136,7 +136,7 @@ static struct wcnss_pmic_dump wcnss_pmic_reg_dump[] = {
 	{"LVS1", 0x060}, /*LVS7*/
 };
 
-#define NVBIN_FILE "wlan/prima/WCNSS_qcom_wlan_nv.bin"
+#define NVBIN_FILE "wlan/prima/WCNSS_qcom_wlan_nv_init.bin"
 
 /*
  * On SMD channel 4K of maximum data can be transferred, including message
