@@ -4151,7 +4151,7 @@ static void __init apq8064_common_init(void)
 
 	msm_hsic_pdata.swfi_latency =
 		msm_rpmrs_levels[0].latency_us;
-	if (machine_is_apq8064_mtp()) {
+	if (machine_is_apq8064_mtp() || machine_is_apq8064_awifi()) {
 		msm_hsic_pdata.log2_irq_thresh = 5,
 		apq8064_device_hsic_host.dev.platform_data = &msm_hsic_pdata;
 		device_initialize(&apq8064_device_hsic_host.dev);
@@ -4165,7 +4165,7 @@ static void __init apq8064_common_init(void)
 	apq8064_init_mmc();
 
 #ifdef CONFIG_MACH_APQ8064_ALTEV /* sangyup.kim@lge.com To remove mdm modem */
-	if (machine_is_apq8064_mtp()) {
+	if (machine_is_apq8064_mtp() || machine_is_apq8064_awifi()) {
 		if (socinfo_get_platform_subtype() == PLATFORM_SUBTYPE_DSDA2) {
 			amdm_8064_device.dev.platform_data =
 				&amdm_platform_data;
