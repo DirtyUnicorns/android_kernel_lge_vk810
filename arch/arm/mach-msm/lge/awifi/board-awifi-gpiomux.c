@@ -2349,7 +2349,7 @@ void __init apq8064_init_gpiomux(void)
 
 // kyle00.choi, 20130402, To feature out the modem. [START]
 #if defined(CONFIG_MODEM_SUPPORT)
-	if (machine_is_apq8064_mtp()) {
+	if (machine_is_apq8064_mtp() || machine_is_apq8064_awifi()) {
 		if (SOCINFO_VERSION_MINOR(platform_version) == 1)
 			msm_gpiomux_install(mdm_i2s_configs,
 					ARRAY_SIZE(mdm_i2s_configs));
@@ -2369,7 +2369,7 @@ void __init apq8064_init_gpiomux(void)
 // kyle00.choi, 20130402, To feature out the modem. [START]
 
 #ifdef CONFIG_USB_EHCI_MSM_HSIC
-	if (machine_is_apq8064_mtp()) {
+	if (machine_is_apq8064_mtp() || machine_is_apq8064_awifi()) {
 		if (SOCINFO_VERSION_MINOR(platform_version) == 1) {
 			msm_gpiomux_install(cyts_gpio_alt_config,
 					ARRAY_SIZE(cyts_gpio_alt_config));
@@ -2379,7 +2379,7 @@ void __init apq8064_init_gpiomux(void)
 		}
 	}
 
-	if (machine_is_apq8064_mtp())
+	if (machine_is_apq8064_mtp() || machine_is_apq8064_awifi())
 		msm_gpiomux_install(apq8064_hsic_configs,
 				ARRAY_SIZE(apq8064_hsic_configs));
 #endif
