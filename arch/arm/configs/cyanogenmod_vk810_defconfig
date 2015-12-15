@@ -1176,49 +1176,7 @@ CONFIG_HAVE_BPF_JIT=y
 # CONFIG_NET_DROP_MONITOR is not set
 # CONFIG_HAMRADIO is not set
 # CONFIG_CAN is not set
-CONFIG_IRDA=y
-
-#
-# IrDA protocols
-#
-# CONFIG_IRLAN is not set
-# CONFIG_IRNET is not set
-# CONFIG_IRCOMM is not set
-# CONFIG_IRDA_ULTRA is not set
-
-#
-# IrDA options
-#
-# CONFIG_IRDA_CACHE_LAST_LSAP is not set
-# CONFIG_IRDA_FAST_RR is not set
-# CONFIG_IRDA_DEBUG is not set
-
-#
-# Infrared-port device drivers
-#
-
-#
-# SIR device drivers
-#
-# CONFIG_IRTTY_SIR is not set
-
-#
-# Dongle support
-#
-# CONFIG_KINGSUN_DONGLE is not set
-# CONFIG_KSDAZZLE_DONGLE is not set
-# CONFIG_KS959_DONGLE is not set
-
-#
-# FIR device drivers
-#
-# CONFIG_USB_IRDA is not set
-# CONFIG_SIGMATEL_FIR is not set
-# CONFIG_MCS_FIR is not set
-CONFIG_LGE_IRDA=y
-# CONFIG_LGE_IRDA_DCM is not set
-# CONFIG_LGE_IRDA_KDDI is not set
-# CONFIG_LGE_IRDA_FACTORY is not set
+# CONFIG_IRDA is not set
 CONFIG_BT=y
 CONFIG_BT_RFCOMM=y
 CONFIG_BT_RFCOMM_TTY=y
